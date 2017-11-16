@@ -6,12 +6,9 @@
     $password = md5($password = $_POST['password']);
 
 
-    $sql = "SELECT * FROM member WHERE student_id = '{$student_id}' AND password = '{$password}'";
-    $res = $dbConnect->query($sql);
+    $data = $mysqli->query("SELECT * FROM `users` WHERE `id` = '" . $_POST['student_id'] . "'");
+        $row = $data->fetch_array(MYSQLI_ASSOC);
 
-
-        $row = $res->fetch_array(MYSQLI_ASSOC);
- 
 
         if ($row != null) {
             $_SESSION['ses_userid'] = $row['student_id'];

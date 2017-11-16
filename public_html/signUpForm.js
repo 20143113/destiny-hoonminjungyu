@@ -10,7 +10,7 @@ $(document).ready(function() {
             }else{
                 $.ajax({
                     type: "POST",
-                    url: $('#signUp').attr("action"),
+                    url: "./signup.php",
                     data: { student_id: $("input[name=student_id]").val(),
                      name: $("input[name=name]").val(),
                      password:$("input[name=password]").val(),
@@ -28,7 +28,7 @@ $(document).ready(function() {
                             }
                         }else{
                             alert("회원가입이 완료되었습니다.");
-                            location="/";
+                            location="/";//처음으로
                         }
                     },
                     dataType: "json"

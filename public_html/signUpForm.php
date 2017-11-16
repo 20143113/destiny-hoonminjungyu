@@ -156,7 +156,7 @@
     </style>
   </head>
   <body>
-    <form class="signUp" id="signUp" action="./signup.php" method="post">
+    <form class="signUp" id="signUp" method="post">
        <h1 class="signUpTitle">회원 가입</h1>
        학번 <input type="text" class="signUpInput" name="student_id" placeholder="ID" autofocus required><br>
        이름 <input type="name" class="signUpInput" name="name" placeholder="name" required><br>
