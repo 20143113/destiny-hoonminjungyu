@@ -28,7 +28,7 @@ $(document).ready(function() {
                             }
                         }else{
                             alert("회원가입이 완료되었습니다.");
-                            location="/";//처음으로
+                            location="/";
                         }
                     },
                     dataType: "json"
