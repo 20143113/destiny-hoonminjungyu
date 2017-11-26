@@ -6,5 +6,10 @@
     }//check connetion DB
 
     $data = $mysqli->query("SELECT * FROM `cabinet` WHERE `user` IS NOT NULL");
-    echo json_encode($data->fetch_object());
+
+    $i = 0;
+    while($obj = $data->fetch_row()){
+        $msg[$i++] = $obj[1];
+    }
+    echo json_encode($msg);
 ?>

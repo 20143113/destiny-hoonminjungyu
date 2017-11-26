@@ -1,4 +1,4 @@
-var srv_time = "<?php print date("F d, Y H:i:s", time()); ?>";
+var srv_time = "<?php print date('F d, Y H:i:s', time()); ?>";
 var now = new Date(srv_time);
 
 setInterval("server_time()", 1000);
