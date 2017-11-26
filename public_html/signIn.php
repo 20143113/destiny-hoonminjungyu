@@ -4,18 +4,18 @@
     if (mysqli_errno($mysqli)){
         exit("mysql connect error");
     }//check connetion DB
-    $memberId = $_POST['student_id'];
-    $memberPw = md5($memberPw = $_POST['password']);
-    $data = $mysqli->query("SELECT * FROM 'users' WHERE 'id' = '{$memberId}' AND password = '{$memberPw}'");
-    $row = $data->fetch_array(MYSQLI_ASSOC);
-    echo '로그아웃 하기';
 
-    if ($row != null) {
-        echo $row['id'].'님 안녕하세요';
-        echo '로그아웃 하기';
-    }
+    $memberId = $mysqli -> real_escape_string($_POST['student_id']);
+    $memberPw = $mysqli -> real_escape_string(md5($memberPw = $_POST['password']));
 
-    if($row == null){
-      echo '로그인 실패 아이디와 비밀번호가 일치하지 않습니다.';
+    $data = $mysqli->query("SELECT * FROM users WHERE id = '{$memberId}' AND pw = '{$memberPw}'");
+    if($data->fetch_array()){
+      echo $memberId.'님 안녕하세요';
+      echo "<a href=main1.html>사물함 신청</a>";
     }
+    else {
+       echo '로그인 실패. 아이디와 비밀번호가 일치하지 않습니다.';
+       echo "<a href=index.html>뒤로가기</a>";
+    }
+    
 ?>

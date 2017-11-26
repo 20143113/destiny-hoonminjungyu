@@ -2,6 +2,9 @@
 <html>
   <head>
     <link rel = "stylesheet" href="main1.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="time.js"></script>
+    <script type="text/javascript" src="mainColor.js"></script>
     <meta charset="utf-8">
     <title>소프트웨어학부 사물함 신청 시스템입니다.</title>
     <style>
@@ -93,69 +96,69 @@
               <th rowspan="7", colspan="7">X</th>
               <tr>
                 <td rowspan="9">계단</td>
-                <td class="locker">A-57</td>
-                <td class="locker">A-60</td>
-                <td class="locker">A-63</td>
+                <td class="locker" id="A-57">A-57</td>
+                <td class="locker" id="A-60">A-60</td>
+                <td class="locker" id="A-63">A-63</td>
                 <td rowspan="9">복도</td>
               </tr>
               <tr>
-                <td class="locker">A-56</td>
-                <td class="locker">A-59</td>
-                <td class="locker">A-62</td>
+                <td class="locker" id="A-56">A-56</td>
+                <td class="locker" id="A-59">A-59</td>
+                <td class="locker" id="A-62">A-62</td>
               </tr>
               <tr>
-                <td class="locker">A-55</td>
-                <td class="locker">A-58</td>
-                <td class="locker">A-61</td>
+                <td class="locker" id="A-55">A-55</td>
+                <td class="locker" id="A-58">A-58</td>
+                <td class="locker" id="A-61">A-61</td>
               </tr>
               <tr>
-                <td class="locker">A-48</td>
-                <td class="locker">A-51</td>
-                <td class="locker">A-54</td>
+                <td class="locker" id="A-48">A-48</td>
+                <td class="locker" id="A-51">A-51</td>
+                <td class="locker" id="A-54">A-54</td>
               </tr>
               <tr>
-                <td class="locker">A-47</td>
-                <td class="locker">A-50</td>
-                <td class="locker">A-53</td>
+                <td class="locker" id="A-47">A-47</td>
+                <td class="locker" id="A-50">A-50</td>
+                <td class="locker" id="A-53">A-53</td>
               </tr>
               <tr>
-                <td class="locker">A-46</td>
-                <td class="locker">A-49</td>
-                <td class="locker">A-52</td>
+                <td class="locker" id="A-46">A-46</td>
+                <td class="locker" id="A-49">A-49</td>
+                <td class="locker" id="A-52">A-52</td>
               </tr>
               <tr>
                 <th rowspan="3">D구역</th>
                 <td>X</td>
-                <td class="locker">A-74</td>
-                <td class="locker">A-75</td>
-                <td class="locker">A-64</td>
-                <td class="locker">A-65</td>
-                <td class="locker">A-66</td>
-                <td class="locker">A-39</td>
-                <td class="locker">A-42</td>
-                <td class="locker">A-45</td>
+                <td class="locker" id="A-74">A-74</td>
+                <td class="locker" id="A-75">A-75</td>
+                <td class="locker" id="A-64">A-64</td>
+                <td class="locker" id="A-65">A-65</td>
+                <td class="locker" id="A-66">A-66</td>
+                <td class="locker" id="A-39">A-39</td>
+                <td class="locker" id="A-42">A-42</td>
+                <td class="locker" id="A-45">A-45</td>
               </tr>
               <tr>
-                <td class="locker">A-76</td>
-                <td class="locker">A-77</td>
-                <td class="locker">A-78</td>
-                <td class="locker">A-67</td>
-                <td class="locker">A-68</td>
-                <td class="locker">A-69</td>
-                <td class="locker">A-38</td>
-                <td class="locker">A-41</td>
-                <td class="locker">A-44</td>
+                <td class="locker" id="A-76">A-76</td>
+                <td class="locker" id="A-77">A-77</td>
+                <td class="locker" id="A-78">A-78</td>
+                <td class="locker" id="A-67">A-67</td>
+                <td class="locker" id="A-68">A-68</td>
+                <td class="locker" id="A-69">A-69</td>
+                <td class="locker" id="A-38">A-38</td>
+                <td class="locker" id="A-52">A-41</td>
+                <td class="locker" id="A-55">A-44</td>
               </tr>
               <tr>
-                <td class="locker">A-79</td>
-                <td class="locker">A-80</td>
+                <td class="locker" id="A-79">A-79</td>
+                <td class="locker" id="A-80">A-80</td>
                 <td>X</td>
-                <td class="locker">A-70</td>
-                <td class="locker">A-71</td>
-                <td class="locker">A-72</td>
-                <td class="locker">A-37</td>
-                <td class="locker">A-40</td>
-                <td class="locker">A-43</td>
+                <td class="locker" id="A-70">A-70</td>
+                <td class="locker" id="A-71">A-71</td>
+                <td class="locker" id="A-72">A-72</td>
+                <td class="locker" id="A-37">A-37</td>
+                <td class="locker" id="A-40">A-40</td>
+                <td class="locker" id="A-43">A-43</td>
               </tr>
               <tr>
                 <th colspan="12">복도</th>
@@ -166,8 +169,6 @@
               </tr>
             </table></center>
 
-
-
-
+  <div id="server_time"><?php echo date("Y-m-d H:i:s", time()); ?></div>
   </body>
 </html>

@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8" />
-    <title>로그인 폼</title>
+  <head>
+    <meta charset="utf-8">
+    <title>회원가입 폼</title>
     <style rel="stylesheet">
     body {
        font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -10,7 +10,7 @@
        background: #596778;
     }
 
-    .signIn {
+    .signUp {
        position: relative;
        margin: 50px auto;
        width: 280px;
@@ -22,8 +22,8 @@
        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     }
 
-    .signIn:before,
-    .signIn:after {
+    .signUp:before,
+    .signUp:after {
        content: '';
        position: absolute;
        bottom: 1px;
@@ -35,12 +35,12 @@
        border-radius: 4px;
     }
 
-    .signIn:after {
+    .signUp:after {
        bottom: 3px;
        border-color: #DCDCDC;
     }
 
-    .signInTitle {
+    .signUpTitle {
        margin: -25px -25px 25px;
        padding: 15px 25px;
        line-height: 35px;
@@ -52,7 +52,7 @@
        background: #F7F7F7;
     }
 
-    .signInTitle:before {
+    .signUpTitle:before {
        content: '';
        position: absolute;
        top: 0;
@@ -75,7 +75,7 @@
        box-sizing: border-box;
     }
 
-    .signInId, .signInPw {
+    .signUpInput {
        width: 100%;
        height: 50px;
        margin-bottom: 25px;
@@ -88,18 +88,18 @@
        box-shadow: inset 0 -2px #EBEBEB;
     }
 
-    .signInId:focus, .signInPw:focus {
+    .signUpInput:focus {
        border-color: #62C2E4;
        outline: none;
        -webkit-box-shadow: inset 0 -2px #62C2E4;
        box-shadow: inset 0 -2px #62C2E4;
     }
 
-    .lt-ie9 .signInId, .signInPw {
+    .lt-ie9 .signUpInput {
        line-height: 48px;
     }
 
-    .signInButton {
+    .signUpButton {
        position: relative;
        vertical-align: top;
        width: 100%;
@@ -118,7 +118,7 @@
        box-shadow: inset 0 -2px #D76B60;
     }
 
-    .signInButton:active {
+    .signUpButton:active {
        top: 1px;
        outline: none;
        -webkit-box-shadow: none;
@@ -153,11 +153,13 @@
     </style>
   </head>
   <body>
-    <form class="signIn" id="signIn" action="./signIn.php" method="post">
-       <h1 class="signInTitle">로그인</h1>
-       <input type="text" class="signInId" name="student_id" placeholder="ID" autofocus required>
-       <input type="password" class="signInPw" name="password" placeholder="password" required>
-       <input type="submit" value="Login!" class="signInButton">
-       <h3 class="title"><a href="./signUpForm.php">회원가입</a>
+    <form class="signUp" id="signUp">
+       <h1 class="signUpTitle">회원 가입</h1>
+       학번 <input type="text" class="signUpInput" placeholder="ID" autofocus required><br>
+       이름 <input type="name" class="signUpInput" placeholder="name" required><br>
+       비밀번호 <input type="password" class="signUpInput" placeholder="password" required><br>
+       비밀번호 확인 <input type="password" class="signUpInput" placeholder="password" required><br>
+       <input type="submit" value="가입하기" class="signUpButton" onclick="location.href='main1.html';">
+     </form>
   </body>
-  </html>
+</html>
