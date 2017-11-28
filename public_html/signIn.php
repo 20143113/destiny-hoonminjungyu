@@ -10,12 +10,12 @@
 
     $data = $mysqli->query("SELECT * FROM users WHERE id = '{$memberId}' AND pw = '{$memberPw}'");
     if($data->fetch_array()){
-      echo $memberId.'님 안녕하세요';
-      echo "<a href=main1.html>사물함 신청</a>";
+        $msg["state"] = "success";
+        echo json_encode($msg);
     }
     else {
-       echo '로그인 실패. 아이디와 비밀번호가 일치하지 않습니다.';
-       echo "<a href=index.html>뒤로가기</a>";
+        $msg["state"] = "fail";
+        echo json_encode($msg);
     }
-    
+
 ?>

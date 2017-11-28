@@ -13,8 +13,8 @@ $(document).ready(function() {
                     url: "./signup.php",
                     data: { student_id: $("input[name=student_id]").val(),
                      name: $("input[name=name]").val(),
-                     password:$("input[name=password]").val(),
-                     grade:$("input[name=grade]").val()
+                     password: $("input[name=password]").val(),
+                     grade: $("input[name=grade]").val()
                     },
                     success:  function(data){
                         console.log(data);

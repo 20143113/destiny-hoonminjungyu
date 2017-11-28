@@ -1,8 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>회원가입 폼</title>
+<head>
+    <meta charset="UTF-8" />
+    <title>로그인 폼</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./jquery.form.min.js"></script>
+    <script type="text/javascript" src="mySignInForm.js"></script>
     <style rel="stylesheet">
     body {
        font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -10,7 +13,7 @@
        background: #596778;
     }
 
-    .signUp {
+    .signIn {
        position: relative;
        margin: 50px auto;
        width: 280px;
@@ -22,8 +25,8 @@
        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     }
 
-    .signUp:before,
-    .signUp:after {
+    .signIn:before,
+    .signIn:after {
        content: '';
        position: absolute;
        bottom: 1px;
@@ -35,12 +38,12 @@
        border-radius: 4px;
     }
 
-    .signUp:after {
+    .signIn:after {
        bottom: 3px;
        border-color: #DCDCDC;
     }
 
-    .signUpTitle {
+    .signInTitle {
        margin: -25px -25px 25px;
        padding: 15px 25px;
        line-height: 35px;
@@ -52,7 +55,7 @@
        background: #F7F7F7;
     }
 
-    .signUpTitle:before {
+    .signInTitle:before {
        content: '';
        position: absolute;
        top: 0;
@@ -75,7 +78,7 @@
        box-sizing: border-box;
     }
 
-    .signUpInput {
+    .signInId, .signInPw {
        width: 100%;
        height: 50px;
        margin-bottom: 25px;
@@ -88,18 +91,18 @@
        box-shadow: inset 0 -2px #EBEBEB;
     }
 
-    .signUpInput:focus {
+    .signInId:focus, .signInPw:focus {
        border-color: #62C2E4;
        outline: none;
        -webkit-box-shadow: inset 0 -2px #62C2E4;
        box-shadow: inset 0 -2px #62C2E4;
     }
 
-    .lt-ie9 .signUpInput {
+    .lt-ie9 .signInId, .signInPw {
        line-height: 48px;
     }
 
-    .signUpButton {
+    .signInButton {
        position: relative;
        vertical-align: top;
        width: 100%;
@@ -118,7 +121,7 @@
        box-shadow: inset 0 -2px #D76B60;
     }
 
-    .signUpButton:active {
+    .signInButton:active {
        top: 1px;
        outline: none;
        -webkit-box-shadow: none;
@@ -153,13 +156,11 @@
     </style>
   </head>
   <body>
-    <form class="signUp" id="signUp">
-       <h1 class="signUpTitle">회원 가입</h1>
-       학번 <input type="text" class="signUpInput" placeholder="ID" autofocus required><br>
-       이름 <input type="name" class="signUpInput" placeholder="name" required><br>
-       비밀번호 <input type="password" class="signUpInput" placeholder="password" required><br>
-       비밀번호 확인 <input type="password" class="signUpInput" placeholder="password" required><br>
-       <input type="submit" value="가입하기" class="signUpButton" onclick="location.href='main1.html';">
-     </form>
+    <form class="signIn" id="signIn" method="post">
+       <h1 class="signInTitle">로그인</h1>
+       <input type="text" class="signInId" name="student_id" placeholder="ID" autofocus required>
+       <input type="password" class="signInPw" name="password" placeholder="password" required>
+       <input type="submit" value="Login!" class="signInButton">
+       <h3 class="title"><a href="./signUpForm.php">회원가입</a>
   </body>
-</html>
+  </html>
